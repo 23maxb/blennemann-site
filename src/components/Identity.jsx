@@ -12,6 +12,7 @@ export default function Identity() {
       </h1>
       <div className="identity__rule" aria-hidden="true" />
       <p className="identity__location">{site.location}</p>
+      <p className="identity__focus">{site.focus}</p>
       <a className="identity__contact" href={`mailto:${site.email}`}>
         <span>{site.email}</span>
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">

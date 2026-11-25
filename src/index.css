@@ -82,7 +82,8 @@ button { font: inherit; color: inherit; }
   border-radius: 2px;
   background: linear-gradient(90deg, var(--teal), var(--lime));
 }
-.identity__location { margin: 0 0 26px; font-size: 0.95rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+.identity__location { margin: 0 0 8px; font-size: 0.95rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+.identity__focus { margin: 0 0 26px; font-size: 0.95rem; letter-spacing: 0.06em; font-style: italic; white-space: pre-line; color: var(--ink-soft); }
 .identity__contact {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 12px 22px;

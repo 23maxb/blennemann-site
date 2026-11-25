@@ -1,16 +1,22 @@
-# React + Vite
+# blennemann-site
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Single-page site for Blennemann Family Investments, built with React + Vite.
 
-Currently, two official plugins are available:
+- Live: https://23maxb.github.io/blennemann-site/
+- Deploys automatically to GitHub Pages on every push to `main` (`.github/workflows/deploy.yml`).
+- Background: a random public-domain painting from the [Art Institute of Chicago API](https://api.artic.edu/docs/), with title, artist, date, medium, style, origin, dimensions and credit line.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Develop
 
-## React Compiler
+```sh
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Structure
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- `src/content.js` - site copy (name, tagline, location, contact)
+- `src/lib/artic.js` - AIC API client (random page of paintings, IIIF image URLs)
+- `src/hooks/useArtwork.js` - fetch + preload + shuffle state
+- `src/components/` - `Background`, `Identity`, `ArtCredit`, `Logo`
+- `public/favicon.svg` / `src/assets/logo.svg` - vector redraw of the letterhead logo

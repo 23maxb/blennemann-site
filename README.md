@@ -2,7 +2,7 @@
 
 Single-page site for Blennemann Family Investments, built with React + Vite.
 
-- Live: https://23maxb.github.io/blennemann-site/
+- Live: https://blennemann.com/ (GitHub Pages custom domain)
 - Deploys automatically to GitHub Pages on every push to `main` (`.github/workflows/deploy.yml`).
 - Background: a random public-domain painting from the [Art Institute of Chicago API](https://api.artic.edu/docs/), with title, artist, date, medium, style, origin, dimensions and credit line.
 

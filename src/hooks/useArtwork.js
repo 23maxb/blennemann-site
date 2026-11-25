@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { fetchRandomArtwork } from '../lib/artic.js'
 import { preloadImage } from '../lib/preload.js'
+import { fallbackArtwork } from '../lib/fallback.js'
 
-// status: 'loading' | 'ready' | 'error'
+// status: 'loading' | 'ready'
 // layers: the previous and current artwork, so the background can crossfade.
 export function useArtwork() {
   const [layers, setLayers] = useState([])
@@ -22,8 +23,10 @@ export function useArtwork() {
       setStatus('ready')
     } catch (err) {
       if (ctrl.signal.aborted) return
-      console.warn('Artwork unavailable:', err)
-      setStatus('error')
+      console.warn('Artwork unavailable, using bundled fallback:', err)
+      // Keep whatever is showing; on first load show the bundled painting.
+      setLayers((prev) => (prev.length ? prev : [fallbackArtwork]))
+      setStatus('ready')
     }
   }, [])
 

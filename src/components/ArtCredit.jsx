@@ -25,7 +25,6 @@ export default function ArtCredit({ artwork, status, onShuffle }) {
 
   return (
     <aside className={`credit ${open ? 'credit--open' : ''}`} aria-live="polite">
-      <p className="credit__label">On the wall</p>
       <h2 className="credit__title">{artwork.title}</h2>
       <p className="credit__artist">{artwork.artist_display}</p>
       <p className="credit__date">{artwork.date_display}</p>

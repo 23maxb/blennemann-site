@@ -16,7 +16,6 @@ export default function App() {
       <div className="page">
         <header className="topbar">
           <Logo size={34} />
-          <span className="topbar__name">{site.shortName}</span>
         </header>
         <main className="main">
           <Identity />

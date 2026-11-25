@@ -188,3 +188,11 @@ button { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Viewing mode: hovering the art credit reveals the full painting ---------- */
+.main, .topbar, .footer__copy, .bg__scrim { transition: opacity 0.6s var(--ease); }
+body:has(.credit:hover, .credit:focus-within) :is(.main, .topbar, .footer__copy) {
+  opacity: 0;
+  pointer-events: none;
+}
+body:has(.credit:hover, .credit:focus-within) .bg__scrim { opacity: 0.35; }
